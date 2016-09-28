@@ -1,0 +1,17 @@
+syntax error - too many arguments. 
+syntax error*. 
+syntax error - invalid environment variable*. 
+syntax error - invalid second argument*. 
+syntax error - third argument, NaN. 
+port out of bounds. 
+Could not open usage file. 
+Could not close usage file. 
+Could not open about file. 
+Could not close about file. 
+Could not close language file.
+listening on port 
+Error: 
+: failed. 
+: passed. 
+ translation files missing, using English.
+ is an invalid language environment variable, using English.

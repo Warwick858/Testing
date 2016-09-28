@@ -1,0 +1,21 @@
+Usage: setport [OPTION]... [PORT]...
+Sets specified port. 
+
+Example: setport -p [PORT#]
+Example: setport --port [PORT#]
+Example: setport -p -e [ENV_VAR]...
+Example: setport --port -e [ENV_VAR]...
+
+Mandatory arguments to long options are mandatory for short options too: 
+  -p, --port        set port (0 < port # < 65,535). 
+  -h, -?, --help    display this help and exit. 
+  -!, --about       credit. 
+  -v, --version     version #. 
+  -e,               if no environment variable specified, default environment port is used.
+  
+Exit status: 
+  0  if OK, 
+  1  if syntax error, 
+  2  if port # out of bounds, 
+  3  if file error
+  4  if specified environment variable is invalid

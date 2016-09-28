@@ -1,0 +1,21 @@
+Uso: SETPORT [OPCIÓN]... [PORT]...
+Conjuntos especificados puerto.
+
+Ejemplo: SETPORT -p [nº de puerto]
+Ejemplo: SETPORT --port [nº de puerto]
+Ejemplo: SETPORT -p -e [ENV_VAR]...
+Ejemplo: SETPORT --port -e [ENV_VAR]...
+
+Los argumentos obligatorios para las opciones largas son obligatorios para las opciones cortas también:
+  -p, --port        configurar el puerto ( 0 < puerto # < 65.535 ).
+  -h, -?, --help    muestra esta ayuda y salir.
+  -!, --unos        Crédito .
+  -v, --version     versión #.
+  -e,               si no se especifica la variable de entorno , se utiliza el puerto entorno por defecto.
+  
+El estado de salida:
+  0 si está bien,
+  1 si error de sintaxis,
+  2 Si el puerto # fuera de límites,
+  3 si error de archivo,
+  4 si la variable de entorno especificado no es válido

@@ -1,0 +1,17 @@
+error de sintaxis - demasiados argumentos.
+error de sintaxis*.
+error de sintaxis - variable de entorno no válido *.
+error de sintaxis - segundo argumento no válido *.
+error de sintaxis - tercer argumento , NaN.
+puerto fuera de límites.
+No se pudo abrir el archivo de uso.
+No se pudo cerrar el archivo de uso.
+No se pudo abrir sobre el archivo.
+No se pudo cerrar sobre el archivo.
+No se pudo cerrar el archivo de idioma.
+escucha en el puerto 
+Error:
+: ha fallado.
+: Pasado.
+ archivos de traducción faltante , utilizando Inglés.
+ es una variable de entorno de idioma válido, el uso de Inglés.
