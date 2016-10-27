@@ -113,8 +113,8 @@ bool checkAlias(){
 
 void createAlias(){
     //Append aliases to .bash_aliases
-    system("echo alias setport='~/workspace/portsetter/setport.cpp.o' >> .bash_aliases");
-    system("echo alias testsetport='~/workspace/portsetter/testsetport.cpp.o' >> .bash_aliases");
+    system("echo alias setport='./setport.cpp.o' >> .bash_aliases");
+    system("echo alias testsetport='./testsetport.cpp.o' >> .bash_aliases");
     
     //Update .bash_aliases
     system("source ~/.bash_aliases");
@@ -122,60 +122,60 @@ void createAlias(){
 
 void runTests(){
     //Run each test, then print results
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o >test.txt") / 256;
+    result = system("./setport.cpp.o >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o -h >test.txt") / 256;
+    result = system("./setport.cpp.o -h >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o --help >test.txt") / 256;
+    result = system("./setport.cpp.o --help >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o -p 4040 >test.txt") / 256;
+    result = system("./setport.cpp.o -p 4040 >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o --port 4040 >test.txt") / 256;
+    result = system("./setport.cpp.o --port 4040 >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o help >test.txt") / 256;
+    result = system("./setport.cpp.o help >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o -help >test.txt") / 256;
+    result = system("./setport.cpp.o -help >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o --h >test.txt") / 256;
+    result = system("./setport.cpp.o --h >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o -h --help >test.txt") / 256;
+    result = system("./setport.cpp.o -h --help >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o -hs >test.txt") / 256;
+    result = system("./setport.cpp.o -hs >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o -p --port 9 >test.txt") / 256;
+    result = system("./setport.cpp.o -p --port 9 >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o -p 77 33 >test.txt") / 256;
+    result = system("./setport.cpp.o -p 77 33 >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o -p -21 >test.txt") / 256;
+    result = system("./setport.cpp.o -p -21 >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o -p 0 >test.txt") / 256;
+    result = system("./setport.cpp.o -p 0 >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o --port >test.txt") / 256;
+    result = system("./setport.cpp.o --port >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o -p 90642 >test.txt") / 256;
+    result = system("./setport.cpp.o -p 90642 >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o -x 45321 >test.txt") / 256;
+    result = system("./setport.cpp.o -x 45321 >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o -P 714 >test.txt") / 256;
+    result = system("./setport.cpp.o -P 714 >test.txt") / 256;
     print(result);
     //CO2
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o -? >test.txt") / 256;
+    result = system("./setport.cpp.o -? >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o -! >test.txt") / 256;
+    result = system("./setport.cpp.o -! >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o --about >test.txt") / 256;
+    result = system("./setport.cpp.o --about >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o -v >test.txt") / 256;
+    result = system("./setport.cpp.o -v >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o --version >test.txt") / 256;
+    result = system("./setport.cpp.o --version >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o -p -e >test.txt") / 256;
+    result = system("./setport.cpp.o -p -e >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o --port -e >test.txt") / 256;
+    result = system("./setport.cpp.o --port -e >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o -p -e MY_PORT >test.txt") / 256;
+    result = system("./setport.cpp.o -p -e MY_PORT >test.txt") / 256;
     print(result);
-    result = system("/home/ubuntu/workspace/portsetter/setport.cpp.o --port -e YOUR_PORT >test.txt") / 256;
+    result = system("./setport.cpp.o --port -e YOUR_PORT >test.txt") / 256;
     print(result);
     cout << "See readme.txt if you would like to test the language feature. " << endl;
 } // end function runTests()
