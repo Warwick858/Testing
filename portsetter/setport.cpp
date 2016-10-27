@@ -37,19 +37,19 @@ int language();
 //The getLangPrefix function
 //Purpose: To get the language prefix
 //Return: The language prefix in the form of a string, or "invalid"
-string getLangPrefix(string _lang);
+string getLangPrefix(const string& _lang);
 
 //The checkLangFiles function
 //Purpose: To check if the specified language file is present
-int checkLangFiles(string _lang);
+int checkLangFiles(const string& _lang);
 
 //The getLangFiles function
 //Purpose: To get the appropriate language files
-vector<string> getLangFiles(string _lang);
+vector<string> getLangFiles(const string& _lang);
 
 //The readLangFiles function
 //Purpose: To read the file of language specific prompts, and save to vector
-int readLangFiles(vector<string> _langFiles);
+int readLangFiles(const vector<string>& _langFiles);
 
 //The portIsNum function
 //Purpose: To check whether arg 2 is a number
@@ -70,12 +70,12 @@ int printAbout();
 //The printFail function
 //Purpose: To print an error message 
 //Parameters: A string represented as _errorMsg
-void printFail(string _errorMsg);
+void printFail(const string& _errorMsg);
 
 //The printSuccess function
 //Purpose: To print a success message which includes the set port
 //Parameters: A string represented as _successPort
-void printSuccess(string _successPort);
+void printSuccess(const string& _successPort);
 
 //Define Globals:
 const string VERSION_NUM = "1.4";
@@ -259,7 +259,7 @@ int language() {
 	} // end for
 } // end function language()
 
-string getLangPrefix(string _lang) {
+string getLangPrefix(const string& _lang) {
 	//Declare vars:
 	string language = "";
 	
@@ -271,7 +271,7 @@ string getLangPrefix(string _lang) {
 	else { return "invalid"; } // language contains non-alphas
 } // end function getLangPrefix()
 
-int checkLangFiles(string _lang) {
+int checkLangFiles(const string& _lang) {
 	//If language is invalid
 	if (_lang.compare("invalid") == 0) { return 2; } // end if
 	
@@ -287,18 +287,26 @@ int checkLangFiles(string _lang) {
 	} else { return 0; } // file is good
 } // end checkLangFiles()
 
-vector<string> getLangFiles(string _lang) {
+vector<string> getLangFiles(const string& _lang) {
 	//Init vars:
 	vector<string> langFiles;
 	
-	langFiles.push_back("/home/ubuntu/workspace/portsetter/langs/" + _lang + "/setport.prompts_" + _lang + ".txt");
-	langFiles.push_back("/home/ubuntu/workspace/portsetter/langs/" + _lang + "/setport.usage_" + _lang + ".txt");
-	langFiles.push_back("/home/ubuntu/workspace/portsetter/langs/" + _lang + "/setport.about_" + _lang + ".txt");
+	
+	// langFiles.push_back("./portsetter/langs/setport.prompts_" + _lang + ".txt");
+	// langFiles.push_back("./portsetter/langs/setport.usage_" + _lang + ".txt");
+	// langFiles.push_back("./portsetter/langs/setport.about_" + _lang + ".txt");
+	// langFiles.push_back("langs/setport.prompts_" + _lang + ".txt");
+	// langFiles.push_back("langs/setport.usage_" + _lang + ".txt");
+	// langFiles.push_back("langs/setport.about_" + _lang + ".txt");
+	//THESE ARE THE PATHS I CANNOT SEEM TO FIX!!!********************************************************************
+	langFiles.push_back("/home/ubuntu/workspace/portsetter/langs/setport.prompts_" + _lang + ".txt");
+	langFiles.push_back("/home/ubuntu/workspace/portsetter/langs/setport.usage_" + _lang + ".txt");
+	langFiles.push_back("/home/ubuntu/workspace/portsetter/langs/setport.about_" + _lang + ".txt");
 	
 	return langFiles;
 } // end function getLangFiles()
 
-int readLangFiles(vector<string> _langFiles) {
+int readLangFiles(const vector<string>& _langFiles) {
 	//Init vars:
 	string data = "";
 	vector<string> currVector;
@@ -356,12 +364,12 @@ int printAbout() {
 	} // end for
 } // end function printAbout()
 
-void printFail(string _errorMsg) {
+void printFail(const string& _errorMsg) {
 	cout << prompts[ERROR];
 	cout << _errorMsg << endl;
 } // end function printFail()
 
-void printSuccess(string _successPort) {
+void printSuccess(const string& _successPort) {
 	cout << prompts[SUCCESS];
 	cout << _successPort << endl;
 } // end function printSuccess()
