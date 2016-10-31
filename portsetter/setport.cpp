@@ -115,6 +115,9 @@ int main(int argc, char* args[]) {
 
 	//Handle Internationalization
 	language();
+	
+	//Changes Made!!!!!!!!!!!!!!!!
+	cout << "Changes" << endl;
 
 	//If more than 4 args are given
 	if (argc > MAX_ARGS) {
