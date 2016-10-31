@@ -177,6 +177,8 @@ void runTests(){
     print(result);
     result = system("./setport.cpp.o --port -e YOUR_PORT >test.txt") / 256;
     print(result);
+    result = system("./setport.cpp.o --port --environment >test.txt") / 256;
+    print(result);
     cout << "See readme.txt if you would like to test the language feature. " << endl;
 } // end function runTests()
 
